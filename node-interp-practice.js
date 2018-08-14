@@ -29,3 +29,32 @@ function randomChar(array){
 }
 
 randomChar(greeting.split(""))
+
+
+// Create an empty map and assign it to the variable candy
+
+const candy = new Map([])
+
+// Set five colors as keys in the map and flavors as the values, 
+// for instance “purple” could be “grape”.
+
+const candyFlavors = new Map([
+
+	['green', 'mint'],
+	['orange', 'orange'],
+	['purple', 'grape'],
+	['red', 'raspberry'],
+	['blue', 'blueberry']
+])
+
+// Iterate over the candy flavors to print “The x flavor is colored y.” for each.
+
+for (let keyValue of candyFlavors) {
+	console.log(`The ${keyValue[1]} flavor is colored ${keyValue[0]}.`)
+}
+
+// Get the value of a color from the map, and see 
+// what happens when you try getting a value of a color that doesn’t exist.
+
+candyFlavors.get('black')
+candyFlavors.get('blue')
